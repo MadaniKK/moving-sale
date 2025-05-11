@@ -11,7 +11,7 @@
 .back-btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: #355C7D;
+  color: #355c7d;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
@@ -28,7 +28,7 @@
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Gallery container */
@@ -39,49 +39,56 @@
   overflow: hidden;
 }
 .detail-image.gallery img {
+  /* force a square box */
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+
+  /* cover & crop rather than squish */
   object-fit: cover;
+  object-position: center;
+
   display: block;
+  /* keep your rounded corners */
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+
+  /* remove the old height:auto; */
+  /* height: auto; */
 }
 
 /* Gallery nav buttons */
 .gallery-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    background: transparent;        /* <- no bg when not hovered */
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.2s ease;  /* smooth fade-in */
-    z-index: 1;
-  }
-  
-  .gallery-btn:hover {
-    background: rgba(0,0,0,0.4);    /* <- show bg on hover */
-  }
-  
-  .gallery-btn.prev {
-    left: 10px;
-  }
-  
-  .gallery-btn.next {
-    right: 10px;
-  }
-  
-  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent; /* <- no bg when not hovered */
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease; /* smooth fade-in */
+  z-index: 1;
+}
+
+.gallery-btn:hover {
+  background: rgba(0, 0, 0, 0.4); /* <- show bg on hover */
+}
+
+.gallery-btn.prev {
+  left: 10px;
+}
+
+.gallery-btn.next {
+  right: 10px;
+}
 
 /* Right side (details) at 60% */
 .detail-content {
@@ -123,7 +130,7 @@
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .detail-content .price.free {
   background-color: #e0f7fa;
