@@ -1,0 +1,169 @@
+/* --- Reset & Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    padding: 1rem;
+    line-height: 1.4;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;           /* extra space below header */
+    padding: 1.5rem 1rem;           /* roomy padding top/bottom */
+    background-color: #fff;         /* white “card” look */
+    border-radius: 8px;             /* soften corners */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  header h1 {
+    font-size: 2.25rem;             /* larger title */
+    margin-bottom: 0.5rem;          /* more breathing room */
+    letter-spacing: 1px;            /* subtle spacing */
+  }
+  
+  header p {
+    font-size: 1rem;                /* slightly bigger sub-text */
+    color: #555;
+  }
+  
+  /* --- Controls --- */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+  
+  .controls label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  
+  .controls select {
+    margin-top: 0.25rem;
+    padding: 0.4rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* --- Grid & Cards --- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    position: relative;          /* for badge positioning */
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 0.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* --- Top-Corner Price Badge --- */
+  .card-content .price {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+  
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  
+  /* special “Free” variant */
+  .card-content .price.free {
+    background-color: #e0f7fa;
+    border-color: #4dd0e1;
+    color: #006064;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+  }
+  
+  .card-content small {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .status.available {
+    background: #e0f7ea;
+    color: #2e7d32;
+  }
+  
+  .status.sold {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+/* default (mobile → small desktop) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* larger cards on wider screens */
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  /* even more columns on ultra-wide */
+  @media (min-width: 1440px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+  }
+  

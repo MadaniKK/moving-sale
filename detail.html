@@ -1,0 +1,88 @@
+<!-- detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Item Detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body>
+  <main class="detail-container">
+    <a href="index.html" class="back-btn">&larr; Back to list</a>
+    <div id="detail-view"></div>
+  </main>
+
+  <script type="module">
+    import { items } from './items.js';
+
+    const params    = new URLSearchParams(window.location.search);
+    const idx       = parseInt(params.get('id'), 10);
+    const container = document.getElementById('detail-view');
+
+    if (Number.isNaN(idx) || idx < 0 || idx >= items.length) {
+      container.innerHTML = '<p>Item not found.</p>';
+    } else {
+      const item   = items[idx];
+      // support new `images` array or fall back to single image
+      const images = item.images && item.images.length
+        ? item.images
+        : [item.imageUrl];
+
+      // render the card with gallery
+      container.innerHTML = `
+        <div class="detail-card">
+            <div class="detail-image gallery">
+                <button class="gallery-btn prev"><</button>
+                    <img src="${images[0]}" alt="${item.title}">
+                <button class="gallery-btn next">></button>
+            </div>
+          <div class="detail-content">
+            <h2>${item.title}</h2>
+            <small>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</small>
+            <p>${item.description}</p>
+            <div class="price ${item.price === 0 ? 'free' : ''}">
+              ${item.price === 0 ? 'Free' : '$' + item.price}
+            </div>
+            <span class="status ${item.status}">
+              ${item.status === 'sold' ? 'Sold' : 'Available'}
+            </span>
+          </div>
+        </div>
+      `;
+
+      // gallery logic
+      let current = 0;
+      const gallery = container.querySelector('.gallery');
+      const imgEl    = gallery.querySelector('img');
+      const prevBtn  = gallery.querySelector('.prev');
+      const nextBtn  = gallery.querySelector('.next');
+
+      function updateImage() {
+        imgEl.src = images[current];
+      }
+
+      prevBtn.addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        updateImage();
+      });
+      nextBtn.addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        updateImage();
+      });
+
+      // touch/swipe support
+      let startX = 0;
+      imgEl.addEventListener('touchstart', e => {
+        startX = e.changedTouches[0].pageX;
+      });
+      imgEl.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].pageX;
+        if (endX - startX > 50) prevBtn.click();
+        else if (startX - endX > 50) nextBtn.click();
+      });
+    }
+  </script>
+</body>
+</html>

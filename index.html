@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apartment Move-Out: Freebies & Finds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Apartment Move-Out: Freebies & Finds</h1>
+    <p>Last updated: <span id="last-updated"></span></p>
+    <div class="controls">
+      <label>
+        Category:
+        <select id="filter-category">
+          <option value="all">All</option>
+        </select>
+      </label>
+      <label>
+        Sort by:
+        <select id="sort-by">
+          <option value="title">Title ↕</option>
+          <option value="status">Status (Available first)</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main>
+    <div class="grid" id="items-grid">
+      <!-- cards injected here -->
+    </div>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

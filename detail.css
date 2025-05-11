@@ -1,0 +1,178 @@
+/* detail.css */
+
+/* Container around the whole detail section */
+.detail-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* “Back to list” link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #355C7D;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.back-btn:hover {
+  color: #263f52;
+  text-decoration: underline;
+}
+
+/* The main card: gallery on the left, details on the right */
+.detail-card {
+  display: flex;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Gallery container */
+.detail-image.gallery {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+.detail-image.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Gallery nav buttons */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: transparent;        /* <- no bg when not hovered */
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s ease;  /* smooth fade-in */
+    z-index: 1;
+  }
+  
+  .gallery-btn:hover {
+    background: rgba(0,0,0,0.4);    /* <- show bg on hover */
+  }
+  
+  .gallery-btn.prev {
+    left: 10px;
+  }
+  
+  .gallery-btn.next {
+    right: 10px;
+  }
+  
+  
+
+/* Right side (details) at 60% */
+.detail-content {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.detail-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Category label */
+.detail-content small {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.detail-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Price styling */
+.detail-content .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.detail-content .price.free {
+  background-color: #e0f7fa;
+  border-color: #4dd0e1;
+  color: #006064;
+}
+
+/* Status badge */
+.detail-content .status {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+.detail-content .status.available {
+  background: #e0f7ea;
+  color: #2e7d32;
+}
+.detail-content .status.sold {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .detail-card {
+    flex-direction: column;
+  }
+  .detail-image.gallery,
+  .detail-content {
+    flex: unset;
+    max-width: 100%;
+  }
+  .detail-image.gallery img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+  }
+  .detail-content {
+    padding: 1.5rem;
+  }
+  /* Hide nav buttons on very small screens if desired */
+  .gallery-btn {
+    display: none;
+  }
+}
+
+.detail-content .price,
+.detail-content .status {
+  align-self: flex-start;
+}
