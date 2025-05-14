@@ -7,7 +7,16 @@ export const items = [
     category: "electronics",
     price: 0,
     status: "available",
-    images: ["images/batteries_24pcs_1.png", "images/batteries_24pcs_2.png"],
+    images: ["images/batteries_aa.png"],
+  },
+  {
+    title: "Duracell AAA Battery 16pcs",
+    description:
+      "12pc unused Duracell AAA Battery with Power Boost ingredients",
+    category: "electronics",
+    price: 0,
+    status: "available",
+    images: ["images/batteries_aaa.png"],
   },
   {
     title: "Collapsible Heated Foot Spa Tub",
@@ -17,14 +26,6 @@ export const items = [
     price: 0,
     status: "available",
     images: ["images/foottub_1.jpg", "images/foottub_2.png"],
-  },
-  {
-    title: "Floor Lamp",
-    description: "Tall lamp with LED bulb included.",
-    category: "lighting",
-    price: 0,
-    status: "available",
-    images: ["images/placeholder.jpg", "images/placeholder2.jpg"],
   },
   {
     title: "Electric Kettle",
@@ -39,7 +40,7 @@ export const items = [
     title: "Kirkland Signature 13 Gallon Garbage Bags",
     description:
       "Kirkland Signature 13 Gallon 200 Ct Carton 100% recyclable Heavy Duty Drawstring Kitchen Trash Bags Garbage Bag,White, (85% left) Swiffer Sweeper Wet Mopping Cloths with Febreze Freshness - Lavender Vanilla",
-    category: "kitchen",
+    category: "cleaning",
     price: 0,
     status: "available",
     images: ["images/trashbags_13gallon.jpg"],
@@ -48,7 +49,7 @@ export const items = [
     title: "Swiffer Wet Mopping Cloths - Lavendar",
     description:
       "Unopened Swiffer Sweeper Wet Mopping Cloths with Febreze Freshness - Lavender Vanilla 24pc",
-    category: "kitchen",
+    category: "cleaning",
     price: 0,
     status: "available",
     images: ["images/SwifferSweeperWetMoppingCloths.avif"],
@@ -68,7 +69,7 @@ export const items = [
     title: "Cordless Vacuum Cleaner",
     description:
       "Cordless Vacuum Cleaner, 550W/45Kpa/65Mins Vacuum Cleaners for Home, Self-Standing Stick Vacuum with LED Display, Rechargeable Cordless Vacuum, Lightweight for Carpet, Pet Hair, Hardwood Floor",
-    category: "storage",
+    category: "cleaning",
     price: 0,
     status: "available",
     images: ["images/vacummcleaner.jpg"],
@@ -90,7 +91,7 @@ export const items = [
     title: "Dreo 6L Humidifiers for Bedroom, Smart",
     description:
       "Dreo 6L Humidifiers for Bedroom, Smart Warm & Cool Mist for Large Room, 60Hr Quiet Runtime for Baby, Plant, Humidity Sensor, Indicator Light, 12H Timer, Google/Alexa, HM713S",
-    category: "storage",
+    category: "electronics",
     price: 0,
     status: "available",
     images: ["images/dreohumidifier_2.jpg", "images/dreohumidifier_1.jpg"],
@@ -142,5 +143,59 @@ export const items = [
     images: ["images/plasticwrap.jpg"],
     amazonUrl:
       "https://www.amazon.com/Kirkland-Signature-Stretch-Tite-Plastic-Count/dp/B006B7QJ6K/ref=asc_df_B006B7QJ6K?mcid=b3950ec7695b3f6c938332d283f88874&hvocijid=4047205818463352992-B006B7QJ6K-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=4047205818463352992&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9002242&hvtargid=pla-2281435180258&psc=1",
+  },
+  {
+    title: "Small Trash Bags 4 Gallon",
+    description:
+      "Small Trash Bags 4 Gallon, 100 Count Small Garbage Bag Bathroom White Mini Trash Bag Trash Can Liners Unscented Small Garbage Bags for Bathroom Can",
+    category: "cleaning",
+    price: 0,
+    status: "available",
+    images: ["images/smalltrashbag.jpg"],
+  },
+  {
+    title: "Nicehill Dresser for Bedroom with 9 Drawer",
+    description:
+      "Nicehill Dresser for Bedroom with 9 Drawer,White Dresser with LED Light,TV Stand for Bedroom with Charging Station,Fabric Drawer for Hallway,Closet (White)",
+    category: "storage",
+    price: 0,
+    status: "available",
+    images: ["images/dresser.jpg", "images/dresser_2.jpg"],
+    amazonUrl:
+      "https://www.amazon.com/Nicehill-Dresser-Bedroom-Charging-Station/dp/B0DM5984F2/ref=sr_1_2_sspa?crid=29JE0L648SJFF&dib=eyJ2IjoiMSJ9.cDJMt-8bT8x3RYXkQfEpNtg7fgiiZ3UeieHt1Wn_jr83NOPO1GQoLlNrIDLGTWT6rBW6ZACmQoFNgcVwaIMg-Vqe4fIa0WwHAHY1IfIx3KlJT98tl_M7YFk8mWQ_EwRZ6scxCmm8mftkJiIZyG--eGSkDG4aLjODguaQjRbu7UjoKKZIRCVZm0Zlh-9MHyenyJJmWRmRGn4MGAJ3rpNysK0xk_Irj-OKDNVqb1vsJgMc7ykD9tadJqIBBDcs2zeUMtsZ8QMAtVReRwv094KMOYCwentfAJwsPFv0LU2xcx4.QMG-rMgCwX5ODSJvhyLEQaowJo9BgCKEOI_tEhEzocY&dib_tag=se&keywords=nicehill%2Bdresser%2Bfor%2Bbedroom&qid=1747255806&sprefix=nicehill%2Bdresser%2Bfor%2Bbedroom%2Caps%2C72&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+  },
+  {
+    title: "Adorable Panda Garbage Can",
+    description: "Adorable space-saving hanging garbage can for kiten cabinet",
+    category: "kitchen",
+    price: 0,
+    status: "available",
+    images: ["images/pandatrashcan.jpeg"],
+    amazonUrl:
+      "https://www.temu.com/1pc-space-saving-hanging--for-kitchen-cabinet-door-under-sink-odor-barrier-silent-closing-push-to-open--backing-hooks-durable-plastic-compost-bin-for-kitchen-bathroom-office-office----mounting-g-601100582476555.html?_oak_mp_inf=EIu2xZWq1ogBGiA4MDYyMTRlMjEzNzg0YmNjOGRjZTJkZmNhZjEzN2U4MSC5uPGE7TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F16916022-f0ce-4caf-8fe1-c2f1d4016e4f.jpg&spec_gallery_id=5811153798&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=ODkz&_oak_gallery_order=1413568107%2C488266734%2C1827647353%2C887665856%2C1954417494&search_key=FK1903379&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1747256218025_d4o6aeq1fu&_x_sessn_id=jc1fcgtv4r",
+  },
+  {
+    title:
+      "13gal Swing Top Waste Basket White Brightroom™:Kitchen Trash Can, 13 Gallon Capacity,",
+    description:
+      "13gal Swing Top Waste Basket White - Brightroom™: Kitchen Trash Can, 13 Gallon Capacity, Textured Plastic, Indoor Use",
+    category: "kitchen",
+    price: 0,
+    status: "available",
+    images: ["images/trashcan.jpg"],
+    amazonUrl:
+      "https://www.target.com/p/13gal-swing-top-waste-basket-white-brightroom-8482/-/A-87299512#lnk=sametab",
+  },
+  {
+    title:
+      "2ct BIC EZ Reach Birthday Pocket Lighters: Multicolor Butane Clean Burning Candle & Torch Lighter Wand",
+    description:
+      "2ct BIC EZ Reach Birthday Pocket Lighters: Multicolor Butane Clean Burning Candle & Torch Lighter Wand",
+    category: "kitchen",
+    price: 0,
+    status: "available",
+    images: ["images/lighter.jpg"],
+    amazonUrl:
+      "https://www.target.com/p/2ct-bic-ez-reach-birthday-pocket-lighters/-/A-80109100#lnk=sametab",
   },
 ];
