@@ -39,7 +39,7 @@ export const items = [
   {
     title: "Kirkland Signature 13 Gallon Garbage Bags",
     description:
-      "Kirkland Signature 13 Gallon 200 Ct Carton 100% recyclable Heavy Duty Drawstring Kitchen Trash Bags Garbage Bag,White, (85% left) Swiffer Sweeper Wet Mopping Cloths with Febreze Freshness - Lavender Vanilla",
+      "Kirkland Signature 13 Gallon 200 Ct Carton 100% recyclable Heavy Duty Drawstring Kitchen Trash Bags Garbage Bag,White, (85% left)",
     category: "cleaning",
     price: 0,
     status: "available",
